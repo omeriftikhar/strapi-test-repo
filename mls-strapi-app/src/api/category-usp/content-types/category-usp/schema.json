@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_usps",
+  "info": {
+    "singularName": "category-usp",
+    "pluralName": "category-usps",
+    "displayName": "Category USP",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "minLength": 3,
+      "required": true
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-category.sub-category",
+      "inversedBy": "sub_category_usps"
+    },
+    "special_sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::special-sub-category.special-sub-category",
+      "inversedBy": "special_sub_category_usps"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    }
+  }
+}

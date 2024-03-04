@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuts",
+  "info": {
+    "singularName": "cut",
+    "pluralName": "cuts",
+    "displayName": "Cut",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "cuts"
+    },
+    "special_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::special-category.special-category",
+      "inversedBy": "cuts"
+    }
+  }
+}

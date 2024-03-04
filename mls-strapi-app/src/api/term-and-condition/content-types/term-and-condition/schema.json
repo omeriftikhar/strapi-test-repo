@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "term_and_conditions",
+  "info": {
+    "singularName": "term-and-condition",
+    "pluralName": "term-and-conditions",
+    "displayName": "Term and Condition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "text": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

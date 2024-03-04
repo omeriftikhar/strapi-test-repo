@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rider_tip_options",
+  "info": {
+    "singularName": "rider-tip-option",
+    "pluralName": "rider-tip-options",
+    "displayName": "Rider Tip Option"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "amount": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "currency": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "minLength": 3,
+      "default": "OMR"
+    }
+  }
+}
