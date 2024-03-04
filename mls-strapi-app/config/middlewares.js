@@ -15,7 +15,7 @@ module.exports = [
       enabled: true,
       headers: '*',
       // TODO: Fix them before pushing
-      origin: ['http://localhost:3033', 'http://localhost:1337']
+      origin: ['http://localhost:3033', 'http://localhost:1337', 'https://prized-novelty-81ba326ac2.strapiapp.com']
     }
   },
 ];
